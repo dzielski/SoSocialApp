@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,6 +20,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoSocialBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zbg-I1-Qbm">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qYn-ZT-KL2" appends="YES" id="sel-Dt-tmD"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 66" translatesAutoresizingMaskIntoConstraints="NO" id="3zA-nX-kfc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -256,6 +260,9 @@
                                         <include reference="lIL-38-hPe"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="forgotPassTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhP-Cf-8G0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-9I-GrQ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -276,6 +283,9 @@
                                         <include reference="kw2-XX-3za"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="logInBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yG-im-Gy1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQR-zf-2Sc">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -430,11 +440,14 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="jF4-V0-tYu" id="uzc-gl-3j0"/>
+                        <outlet property="pwdField" destination="UXu-AS-i0O" id="iGw-C9-Cj4"/>
                         <segue destination="MC9-GV-YtE" kind="show" identifier="loginToFeed" id="6Oe-du-h6B"/>
                         <segue destination="hhI-Ex-MKb" kind="show" identifier="forgotPassword" id="U7w-f6-OJR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qYn-ZT-KL2"/>
             </objects>
             <point key="canvasLocation" x="367.5" y="235.5"/>
         </scene>
@@ -2113,7 +2126,7 @@
         <image name="your-posts1" width="43" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n44-cN-t7z"/>
-        <segue reference="jKD-Ch-9om"/>
+        <segue reference="6Oe-du-h6B"/>
+        <segue reference="Vt5-I8-MOy"/>
     </inferredMetricsTieBreakers>
 </document>

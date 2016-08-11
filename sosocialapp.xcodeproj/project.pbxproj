@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164492671D5D2D4F003C71B9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492661D5D2D4F003C71B9 /* SignInVC.swift */; };
+		1644926A1D5D3397003C71B9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492691D5D3397003C71B9 /* DataService.swift */; };
+		164492761D5D3AB1003C71B9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492751D5D3AB1003C71B9 /* FeedVC.swift */; };
 		165C68FB1D5BFD1500D33266 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 165C68FA1D5BFD1500D33266 /* GoogleService-Info.plist */; };
 		165C69071D5C179500D33266 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165C69061D5C179500D33266 /* FancyView.swift */; };
 		165C69091D5C190500D33266 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165C69081D5C190500D33266 /* Constants.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		164492661D5D2D4F003C71B9 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		164492691D5D3397003C71B9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		164492751D5D3AB1003C71B9 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		165C68FA1D5BFD1500D33266 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		165C69061D5C179500D33266 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		165C69081D5C190500D33266 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -56,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		164492681D5D337A003C71B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				164492691D5D3397003C71B9 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		165C68FC1D5C16E400D33266 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +88,8 @@
 		165C68FE1D5C16FB00D33266 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				164492661D5D2D4F003C71B9 /* SignInVC.swift */,
+				164492751D5D3AB1003C71B9 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 		16C2575F1D5BFC3C003EACF8 /* sosocialapp */ = {
 			isa = PBXGroup;
 			children = (
+				164492681D5D337A003C71B9 /* Services */,
 				165C68FF1D5C170300D33266 /* View */,
 				165C68FE1D5C16FB00D33266 /* Controller */,
 				165C68FD1D5C16EE00D33266 /* Model */,
@@ -268,10 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164492761D5D3AB1003C71B9 /* FeedVC.swift in Sources */,
 				165C69151D5C285200D33266 /* CircleViewWithBorder.swift in Sources */,
 				165C69131D5C282B00D33266 /* CircleView.swift in Sources */,
 				165C69111D5C27BE00D33266 /* RoundBtnNoShadow.swift in Sources */,
 				16C257631D5BFC3C003EACF8 /* ViewController.swift in Sources */,
+				164492671D5D2D4F003C71B9 /* SignInVC.swift in Sources */,
+				1644926A1D5D3397003C71B9 /* DataService.swift in Sources */,
 				16C257611D5BFC3C003EACF8 /* AppDelegate.swift in Sources */,
 				165C69071D5C179500D33266 /* FancyView.swift in Sources */,
 				165C690F1D5C275B00D33266 /* RoundBtn.swift in Sources */,
