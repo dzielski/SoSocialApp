@@ -139,7 +139,7 @@ class SignInVC: UIViewController {
                 print("DZ: No Username associated with this user")
                 self.performSegueWithIdentifier("noUserName", sender: nil)
             } else {
-                self.performSegueWithIdentifier("goToFeed", sender: nil)
+                self.performSegueWithIdentifier("loginToFeed", sender: nil)
                 
             }
             

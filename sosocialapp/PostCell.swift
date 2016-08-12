@@ -85,6 +85,7 @@ class PostCell: UITableViewCell {
             
         })
         
+        print("DZ: Post Caption = \(post.caption)")
         self.caption.text = post.caption
         self.caption.userInteractionEnabled = false
         self.likesLbl.text = "\(post.likes)"

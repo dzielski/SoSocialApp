@@ -13,7 +13,7 @@ import SwiftKeychainWrapper
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var imageAdd: RoundBtnNoShadow!
+    @IBOutlet weak var imageAdd: CircleView!
     @IBOutlet weak var captionField: FancyFieldTextBox!
     @IBOutlet weak var topFeedType: UILabel!
     @IBOutlet weak var allFeedBarBtnView: UIBarButtonItem!
@@ -87,14 +87,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             return posts.count
         }
     }
-        
+    
+    
+    func numberOfSectionsInTableView(tableView:UITableView)->Int
+    {
+        return 1
+    }
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
+        
+//        let cell = PostCell()
+//        let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell
+//        let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostCell
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
 
 //        cell.delegate = self
-          
+
+        
             if let img = FeedVC.imageCache.objectForKey(post.imageURL) {
                 cell.configureCell(post, img: img as? UIImage)
             } else {
@@ -114,6 +126,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     // MARK: - Buttons and Actions
     //*****************************************************************
 
+
+    
     @IBAction func cameraIconTapped(sender: AnyObject) {
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
@@ -131,7 +145,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         dismissKeyboard()
         
-        guard let img = imageAdd.imageView!.image where imageSelected == true else {
+        guard let img = imageAdd.image where imageSelected == true else {
             let alert = UIAlertController(title: "Picture Is Missing", message: "You need to add an image to post. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Try Again", style: .Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -216,15 +230,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-            imageAdd.imageView?.image = image
+            imageAdd.image = image
             imageSelected = true
-            self.captionField.becomeFirstResponder();
+//            self.captionField.becomeFirstResponder();
         } else {
             print("DZ: A valid image was not selected")
         }
     
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
     func postToFirebase (imgURL: String, imgID: String) {
         
         let uid = KeychainWrapper.stringForKey(KEY_UID)
@@ -248,11 +264,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         captionField.text = ""
         imageSelected = false
-        imageAdd.imageView?.image = UIImage(named: "add-image")
+        imageAdd.image = UIImage(named: "add-image")
         
         redrawFeedTable()
     }
-
+    
     func redrawFeedTable() {
         
         self.posts = []
