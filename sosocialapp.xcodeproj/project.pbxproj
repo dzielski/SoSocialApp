@@ -10,6 +10,10 @@
 		164492671D5D2D4F003C71B9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492661D5D2D4F003C71B9 /* SignInVC.swift */; };
 		1644926A1D5D3397003C71B9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492691D5D3397003C71B9 /* DataService.swift */; };
 		164492761D5D3AB1003C71B9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492751D5D3AB1003C71B9 /* FeedVC.swift */; };
+		164492781D5D46AA003C71B9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492771D5D46AA003C71B9 /* Post.swift */; };
+		1644927A1D5D46BB003C71B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492791D5D46BB003C71B9 /* User.swift */; };
+		164492821D5D5AAE003C71B9 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492811D5D5AAE003C71B9 /* PostCell.swift */; };
+		164492841D5D73B0003C71B9 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164492831D5D73B0003C71B9 /* FeedType.swift */; };
 		165C68FB1D5BFD1500D33266 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 165C68FA1D5BFD1500D33266 /* GoogleService-Info.plist */; };
 		165C69071D5C179500D33266 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165C69061D5C179500D33266 /* FancyView.swift */; };
 		165C69091D5C190500D33266 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165C69081D5C190500D33266 /* Constants.swift */; };
@@ -30,6 +34,10 @@
 		164492661D5D2D4F003C71B9 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		164492691D5D3397003C71B9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		164492751D5D3AB1003C71B9 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		164492771D5D46AA003C71B9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		164492791D5D46BB003C71B9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		164492811D5D5AAE003C71B9 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		164492831D5D73B0003C71B9 /* FeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedType.swift; sourceTree = "<group>"; };
 		165C68FA1D5BFD1500D33266 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		165C69061D5C179500D33266 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		165C69081D5C190500D33266 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -66,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				164492691D5D3397003C71B9 /* DataService.swift */,
+				164492831D5D73B0003C71B9 /* FeedType.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -81,6 +90,8 @@
 		165C68FD1D5C16EE00D33266 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				164492771D5D46AA003C71B9 /* Post.swift */,
+				164492791D5D46BB003C71B9 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 				165C69101D5C27BE00D33266 /* RoundBtnNoShadow.swift */,
 				165C69121D5C282B00D33266 /* CircleView.swift */,
 				165C69141D5C285200D33266 /* CircleViewWithBorder.swift */,
+				164492811D5D5AAE003C71B9 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -289,7 +301,9 @@
 				165C69151D5C285200D33266 /* CircleViewWithBorder.swift in Sources */,
 				165C69131D5C282B00D33266 /* CircleView.swift in Sources */,
 				165C69111D5C27BE00D33266 /* RoundBtnNoShadow.swift in Sources */,
+				164492781D5D46AA003C71B9 /* Post.swift in Sources */,
 				16C257631D5BFC3C003EACF8 /* ViewController.swift in Sources */,
+				1644927A1D5D46BB003C71B9 /* User.swift in Sources */,
 				164492671D5D2D4F003C71B9 /* SignInVC.swift in Sources */,
 				1644926A1D5D3397003C71B9 /* DataService.swift in Sources */,
 				16C257611D5BFC3C003EACF8 /* AppDelegate.swift in Sources */,
@@ -297,6 +311,8 @@
 				165C690F1D5C275B00D33266 /* RoundBtn.swift in Sources */,
 				165C690D1D5C20E400D33266 /* FancyFieldtextBox.swift in Sources */,
 				165C69091D5C190500D33266 /* Constants.swift in Sources */,
+				164492821D5D5AAE003C71B9 /* PostCell.swift in Sources */,
+				164492841D5D73B0003C71B9 /* FeedType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

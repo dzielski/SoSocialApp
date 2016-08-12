@@ -130,7 +130,7 @@ class SignInVC: UIViewController {
         // start them on friends feed
         FeedType.ft.feedTypeToShow = FeedType.FeedTypeEnum.friendFeed
         
-        DataService.ds.REF_USER_CURRENT.observeEventType(.Value, withBlock: { (snapshot) in
+        DataService.ds.REF_USER_CURRENT.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
             print("DZ: Snap userName = \(snapshot.value!["userName"]!)")
             print("DZ: Snap profileImage = \(snapshot.value!["imageURL"]!)")
