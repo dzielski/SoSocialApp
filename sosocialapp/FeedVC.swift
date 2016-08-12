@@ -55,6 +55,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         redrawFeedTable()
     }
+    
+
+// DZ - TODO - If we get a memory warning we should clear cache
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
     //*****************************************************************
     // MARK: - Table View Functions

@@ -1739,10 +1739,10 @@
             </objects>
             <point key="canvasLocation" x="1060.5" y="-441"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="xgH-pT-zT4">
             <objects>
-                <viewController id="mse-pD-P2r" customClass="ViewController" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mse-pD-P2r" customClass="ProfileVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jbt-tb-aRl"/>
                         <viewControllerLayoutGuide type="bottom" id="LHo-OA-mB5"/>
@@ -1753,6 +1753,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoSocialBackground" translatesAutoresizingMaskIntoConstraints="NO" id="T3X-7s-lh4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Lhm-wA-wkT" appends="YES" id="YYC-6C-K9v"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 66" translatesAutoresizingMaskIntoConstraints="NO" id="XLI-bY-NfS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1860,6 +1864,9 @@
                                         <include reference="mtl-2i-MxH"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="saveBtnTapped:" destination="mse-pD-P2r" eventType="touchUpInside" id="1mZ-Pl-1Uh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isw-pn-u59">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -1902,6 +1909,9 @@
                                         <include reference="UUc-kv-ZGO"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="clkImgBtnTapped:" destination="mse-pD-P2r" eventType="touchUpInside" id="ft2-Rg-GEN"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lg-profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="HBs-SE-0WH" customClass="CircleViewWithBorder" customModule="sosocialapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1941,6 +1951,9 @@
                                         <include reference="wxd-IU-rfv"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="logoutBtnTapped:" destination="mse-pD-P2r" eventType="touchUpInside" id="FM8-vS-r3y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l19-jF-GCf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1961,6 +1974,9 @@
                                         <include reference="yNa-qh-wQM"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="cancelBtnTapped:" destination="mse-pD-P2r" eventType="touchUpInside" id="uWn-94-GaX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtr-4h-wmD">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -2162,12 +2178,15 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="profileImg" destination="HBs-SE-0WH" id="m6v-jl-Dyb"/>
+                        <outlet property="profileName" destination="2pD-gh-3fF" id="KqB-nD-yCr"/>
                         <segue destination="MC9-GV-YtE" kind="show" identifier="profileToFeed" id="tya-oK-Pzr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZD-bK-pL3" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Lhm-wA-wkT"/>
             </objects>
-            <point key="canvasLocation" x="1060.5" y="924"/>
+            <point key="canvasLocation" x="1072.5" y="981"/>
         </scene>
     </scenes>
     <resources>
@@ -2191,6 +2210,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="HLW-Jk-rgl"/>
         <segue reference="jKD-Ch-9om"/>
-        <segue reference="6Oe-du-h6B"/>
+        <segue reference="tya-oK-Pzr"/>
     </inferredMetricsTieBreakers>
 </document>
