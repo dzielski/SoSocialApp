@@ -486,6 +486,9 @@
                                                 <include reference="B7L-EI-oxB"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="searchBtnTapped:" destination="MC9-GV-YtE" eventType="touchUpInside" id="mdw-6F-KsM"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhB-3I-rxO">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -528,6 +531,9 @@
                                                 <include reference="KWo-pf-RgW"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="helpBtnTapped:" destination="MC9-GV-YtE" eventType="touchUpInside" id="MQi-5e-imR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.73333333333333328" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
@@ -672,10 +678,10 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="psb-Ms-KXg"/>
-                                        <exclude reference="Zkl-xO-ay6"/>
-                                        <exclude reference="gE8-s7-yNY"/>
                                         <exclude reference="Njc-rN-6FU"/>
                                         <exclude reference="bo3-jR-OwM"/>
+                                        <exclude reference="Zkl-xO-ay6"/>
+                                        <exclude reference="gE8-s7-yNY"/>
                                         <exclude reference="AyA-nq-Zom"/>
                                         <exclude reference="KFV-d7-zP5"/>
                                         <exclude reference="lHD-lk-ExM"/>
@@ -689,10 +695,10 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="psb-Ms-KXg"/>
-                                        <include reference="Zkl-xO-ay6"/>
-                                        <include reference="gE8-s7-yNY"/>
                                         <include reference="Njc-rN-6FU"/>
                                         <include reference="bo3-jR-OwM"/>
+                                        <include reference="Zkl-xO-ay6"/>
+                                        <include reference="gE8-s7-yNY"/>
                                         <include reference="AyA-nq-Zom"/>
                                         <include reference="KFV-d7-zP5"/>
                                         <include reference="lHD-lk-ExM"/>
@@ -1194,26 +1200,31 @@
             </objects>
             <point key="canvasLocation" x="1060.5" y="235.5"/>
         </scene>
-        <!--View Controller-->
+        <!--HelpVC-->
         <scene sceneID="fMV-Li-lNF">
             <objects>
-                <viewController id="gPR-kG-Tsm" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelpScreenSoSocial-1@1x" id="MPC-Q5-N6p">
+                <viewController id="gPR-kG-Tsm" customClass="HelpVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <imageView key="view" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelpScreenSoSocial-1@1x" id="MPC-Q5-N6p">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pAd-B1-SQP" appends="YES" id="N4O-8V-osh"/>
+                        </connections>
                     </imageView>
                     <connections>
                         <segue destination="MC9-GV-YtE" kind="show" identifier="helpToFeed" id="n44-cN-t7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rii-B5-pZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pAd-B1-SQP"/>
             </objects>
             <point key="canvasLocation" x="1891.5" y="235.5"/>
         </scene>
-        <!--View Controller-->
+        <!--PasswordVC-->
         <scene sceneID="ywW-h3-fsd">
             <objects>
-                <viewController id="hhI-Ex-MKb" customClass="ViewController" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hhI-Ex-MKb" customClass="PasswordVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cpN-Hd-5FR"/>
                         <viewControllerLayoutGuide type="bottom" id="oNI-kB-oin"/>
@@ -1224,6 +1235,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoSocialBackground" translatesAutoresizingMaskIntoConstraints="NO" id="sFq-sm-zxe">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dOc-pT-Wen" appends="YES" id="SLc-D7-iNw"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 66" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-wF-T14">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1331,6 +1346,9 @@
                                         <include reference="lc4-LG-IoO"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="hhI-Ex-MKb" eventType="touchUpInside" id="Hkl-Ek-X0X"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltS-5m-xW2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1351,6 +1369,9 @@
                                         <include reference="y9S-Tu-BQ3"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="submitTapped:" destination="hhI-Ex-MKb" eventType="touchUpInside" id="t5A-Lo-utq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhW-x6-kYT">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -1476,17 +1497,19 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="emailText" destination="JPb-H2-txF" id="ZHI-mZ-z0h"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="passwordToSignIn" id="Vt5-I8-MOy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFS-lI-U6i" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dOc-pT-Wen"/>
             </objects>
             <point key="canvasLocation" x="367.5" y="924"/>
         </scene>
-        <!--View Controller-->
+        <!--Search UserVC-->
         <scene sceneID="FB9-d0-Y9W">
             <objects>
-                <viewController id="Rf5-lR-KcI" customClass="ViewController" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rf5-lR-KcI" customClass="SearchUserVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JeM-IW-bvh"/>
                         <viewControllerLayoutGuide type="bottom" id="HJH-sA-14j"/>
@@ -1497,6 +1520,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoSocialBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Jgk-6b-8Hi">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sRA-Sc-lmJ" appends="YES" id="Le7-Xa-hYY"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 66" translatesAutoresizingMaskIntoConstraints="NO" id="nYk-Or-aN5">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1604,6 +1631,9 @@
                                         <include reference="w9j-RJ-Oc8"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="cancelBtnTapped:" destination="Rf5-lR-KcI" eventType="touchUpInside" id="rSF-Au-fds"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2C-TT-3Kb">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1624,8 +1654,11 @@
                                         <include reference="iZL-7P-BAA"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="findUserBtnTapped:" destination="Rf5-lR-KcI" eventType="touchUpInside" id="dd8-8n-Tvh"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-Bh-Z6L">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-Bh-Z6L">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="Fla-AE-yMV"/>
@@ -1749,10 +1782,12 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="userNameTxtField" destination="y0q-c0-7OY" id="2Gs-On-NHF"/>
                         <segue destination="MC9-GV-YtE" kind="show" identifier="searchToFeed" id="M70-mU-Lwb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poj-e2-Opx" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sRA-Sc-lmJ"/>
             </objects>
             <point key="canvasLocation" x="1060.5" y="-441"/>
         </scene>
@@ -2225,8 +2260,8 @@
         <image name="your-posts1" width="43" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M70-mU-Lwb"/>
         <segue reference="jKD-Ch-9om"/>
+        <segue reference="n44-cN-t7z"/>
         <segue reference="Ulx-nh-7bw"/>
     </inferredMetricsTieBreakers>
 </document>

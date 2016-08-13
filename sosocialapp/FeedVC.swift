@@ -38,7 +38,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInVC.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FeedVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         tableView.delegate = self
@@ -210,6 +210,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func userFeedBtnTapped(sender: AnyObject) {
 
 // DZ - TODO - ADD THE USER POST FUNCTIONALITY
+    }
+
+    @IBAction func searchBtnTapped(sender: AnyObject) {
+        self.performSegueWithIdentifier("searchForUser", sender: nil)
+    }
+    
+    
+    @IBAction func helpBtnTapped(sender: AnyObject) {
+        self.performSegueWithIdentifier("showHelp", sender: nil)
     }
     
 
