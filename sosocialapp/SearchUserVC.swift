@@ -47,19 +47,39 @@ class SearchUserVC: UIViewController, UITextFieldDelegate {
         DataService.ds.REF_USERS.queryOrderedByChild("userName").queryEqualToValue(usrname).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             
             if snapshot.exists() {
-                print("DZ: snapshot exists for \(usrname)")
+
+                var newFriendUserID = ""
+
+                // TODO - not happy with the way newFriendUserID is derived but it works - may want to change it later
+                
+                let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot]
+                
+                for child in snapshots! {
+                    newFriendUserID = child.key
+                    print("DZ: Child Key = \(child.key)")
+                }
+
+                print("DZ: snapshot exists for \(newFriendUserID)")
+
                 self.userNameTxtField.text! = ""
                 
-                let alert = UIAlertController(title: "User Name Was Found", message: "Do you want to add them to your friends list", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "User Name Was Found!", message: "Do you want to add them to your friends list", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 let actionYes = UIAlertAction(title: "Yes", style: .Default) { (action) in
                     
                     print("DZ: In search for username, found a match and they want to add them to their friends")
-                    // DZ - TODO - Add the to the friends list
+
+                    DataService.ds.REF_USER_CURRENT.child("friendList").child(newFriendUserID).setValue(true)
+                    
+                    // send them to thier friend feed now
+                    FeedType.ft.feedTypeToShow = FeedType.FeedTypeEnum.friendFeed
+                    self.performSegueWithIdentifier("searchToFeed", sender: nil)
                 }
                 
                 let actionNo = UIAlertAction(title: "No", style: .Default) { (action) in
                     print("DZ: In search for username, found a match but they dont want to add them to their friends")
+                    // hard decision but figured they found someone and did not want to friend them so go back to feed instead of staying here
+                    self.performSegueWithIdentifier("searchToFeed", sender: nil)
                 }
                 
                 alert.addAction(actionYes)
