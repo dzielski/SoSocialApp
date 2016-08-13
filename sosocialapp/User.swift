@@ -14,6 +14,7 @@ class User {
     
     private var _likeList: String!
     private var _imageURL: String!
+    private var _imgID: String!
     private var _provider: String!
     private var _userName: String!
     private var _friendList: String!
@@ -29,6 +30,10 @@ class User {
         return _imageURL
     }
     
+    var imgID: String {
+        return _imgID
+    }
+
     var provider: String {
         return _provider
     }
@@ -45,9 +50,10 @@ class User {
         return _postList
     }
     
-    init(likeList: String, imageURL: String, provider: String, userName: String, friendList: String, postList: String) {
+    init(likeList: String, imageURL: String, imgID: String, provider: String, userName: String, friendList: String, postList: String) {
         self._likeList = likeList
         self._imageURL = imageURL
+        self._imgID = imgID
         self._provider = provider
         self._userName = userName
         self._friendList = friendList
@@ -65,6 +71,10 @@ class User {
         
         if let imageURL = userData["imageURL"] as? String {
             self._imageURL = imageURL
+        }
+        
+        if let imgID = userData["imgID"] as? String {
+            self._imgID = imgID
         }
         
         if let provider = userData["provider"] as? String {

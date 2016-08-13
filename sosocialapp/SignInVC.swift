@@ -37,7 +37,6 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     //*****************************************************************
 
     override func viewDidAppear(animated: Bool) {
-        
         if let _ = KeychainWrapper.stringForKey(KEY_UID) {
             print("DZ: ID found in keychain")
             self.sendThemOnTheirWay()

@@ -16,8 +16,10 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet weak var profileName: UITextField!
     
     var profileImagePicker: UIImagePickerController!
-    var imageSelected = false
 
+    var imageSelected = false
+    var currentProfileImg = ""
+    var currentProfileImgID = ""
     var startingProfileName = ""
 
     //*****************************************************************
@@ -40,16 +42,26 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             
             self.profileName.text = snapshot.value!["userName"] as? String
             
+            // set the current user profile name if there is one
             self.startingProfileName = self.profileName.text!
             
             // see if there is a image that exists and if so lets use it
             
             if let _ = snapshot.value!["imageURL"]! {
                 
+                // setting this indicates there is an image in storage, so if the user changes thier image
+                // we need to go in and delete this one
                 self.imageSelected = true
                 
-                let profileImage = snapshot.value!["imageURL"] as? String
+                if let _ = snapshot.value!["imgID"]!
+                {
+                    self.currentProfileImgID = (snapshot.value!["imgID"] as? String)!
+                }
                 
+                let profileImage = snapshot.value!["imageURL"] as? String
+                self.currentProfileImg = profileImage!
+                
+                // if image in the cache then use it - else download it from firebase
                 if let img = FeedVC.profileImageCache.objectForKey(profileImage!) {
                     self.profileImg.image = img as? UIImage
                     
@@ -126,6 +138,22 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
                     return
                 }
                 
+                // ok if we made it here we need to delete old profile image from storage and cache if one exists before saving new one
+                
+                if self.imageSelected == true && self.currentProfileImg != "" {
+                    
+                    DataService.ds.REF_PROFILE_IMAGES.child(self.currentProfileImgID).deleteWithCompletion { (error) in
+
+                        if error != nil {
+                            print("DZ: Unable to delete profile image from Firebase storage")
+                        } else {
+                            print("DZ: Deleted profile image from Firebase storage")
+                            FeedVC.profileImageCache.removeObjectForKey(self.currentProfileImg)
+                        }
+                    }
+                }
+                
+                // now on to saving new profile data
                 if let imgData = UIImageJPEGRepresentation(img, 0.2) {
                     
                     let imgUid = NSUUID().UUIDString
@@ -134,17 +162,16 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
                     
                     DataService.ds.REF_PROFILE_IMAGES.child(imgUid).putData(imgData, metadata: metadata) { metadata, error in
                         if error != nil {
-                            print("DZ: Unabel to upload image to Firebase")
+                            print("DZ: Unable to upload image to Firebase")
                         } else {
                             print("DZ: Successfully uploaded image to Firebase")
                             self.imageSelected = false
                             let downloadURL = metadata?.downloadURL()?.absoluteString
                             if let url = downloadURL {
-                                self.postToFirebase(url)
+                                self.postToFirebase(self.profileName.text!, imgURL: url, imgID: imgUid)
                             }
                             
                             // flush cache as we changed a profile image
-                            FeedVC.profileImageCache.removeAllObjects()
                             self.performSegueWithIdentifier("profileToFeed", sender: nil)
                         }
                     }
@@ -212,15 +239,18 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     
-    func postToFirebase (imgURL: String) {
+    // this function will just set the new username and profile image for the current user
+    func postToFirebase (usrName: String, imgURL: String, imgID: String) {
         
-        let profile: Dictionary<String, AnyObject> = [
-            "userName": profileName.text!,
-            "imageURL": imgURL,
-            ]
-        
+//        let profile: Dictionary<String, AnyObject> = [
+//            "userName": profileName.text!,
+//            "imageURL": imgURL,
+//            ]
+//        
         let firebasePost = DataService.ds.REF_USER_CURRENT
-        firebasePost.setValue(profile)
+        firebasePost.child("userName").setValue(usrName)
+        firebasePost.child("imageURL").setValue(imgURL)
+        firebasePost.child("imgID").setValue(imgID)
         
         imageSelected = false
     }
