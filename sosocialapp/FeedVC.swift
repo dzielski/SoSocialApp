@@ -244,7 +244,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
             imageSelected = true
-//            self.captionField.becomeFirstResponder();
+            // move cursor right to caption field
+            self.captionField.becomeFirstResponder();
         } else {
             print("DZ: A valid image was not selected")
         }

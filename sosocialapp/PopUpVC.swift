@@ -18,6 +18,8 @@ class PopUpVC: UIViewController {
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
         
         self.showAnimate()
+        
+        self.view.endEditing(true)
 
         // Do any additional setup after loading the view.
     }
