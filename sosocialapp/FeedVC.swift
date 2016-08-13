@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import SwiftKeychainWrapper
+import GoogleMobileAds
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, GADBannerViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
@@ -20,7 +21,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBOutlet weak var likeFeedBarBtnFeedView: UIBarButtonItem!
     @IBOutlet weak var friendFeedBarBtnView: UIBarButtonItem!
     @IBOutlet weak var userFeedBarBtnView: UIBarButtonItem!
-    
+    @IBOutlet var bannerView: GADBannerView!
+
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
 //    static var imageCache: NSCache = NSCache()
@@ -53,6 +55,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         // setup a redraw feed notification we can call from table cell
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FeedVC.redrawFeedTable), name: "feedRedrawName", object: nil)
         
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerView.delegate = self
+        bannerView.adUnitID = "ca-app-pub-1633928822021141/6932119115"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(request)
+                
         redrawFeedTable()
     }
     
