@@ -17,7 +17,7 @@ class FeedType {
         case allFeed
         case likeFeed
         case friendFeed
-        case searchFeed
+        case userFeed
     }
     
     var feedTypeToShow = FeedTypeEnum.allFeed

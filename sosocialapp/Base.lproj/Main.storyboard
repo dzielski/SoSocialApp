@@ -9,7 +9,7 @@
         <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="So_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -455,7 +455,7 @@
         <!--FeedVC-->
         <scene sceneID="bRg-Ti-aGX">
             <objects>
-                <viewController id="MC9-GV-YtE" customClass="FeedVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MC9-GV-YtE" customClass="FeedVC" customModule="So_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ull-SW-g7p"/>
                         <viewControllerLayoutGuide type="bottom" id="MHr-cI-qou"/>
@@ -464,7 +464,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wta-wN-HBr" customClass="FancyView" customModule="sosocialapp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wta-wN-HBr" customClass="FancyView" customModule="So_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnf-HA-EcF">
@@ -505,7 +505,8 @@
                                                 <exclude reference="gXt-hB-b0L"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="200" y="27" width="200" height="30"/>
                                             <mask key="constraints">
                                                 <include reference="Hrq-v5-cKg"/>
                                                 <include reference="gXt-hB-b0L"/>
@@ -526,7 +527,8 @@
                                                 <exclude reference="KWo-pf-RgW"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="543" y="27" width="40" height="30"/>
                                             <mask key="constraints">
                                                 <include reference="KWo-pf-RgW"/>
                                             </mask>
@@ -562,7 +564,8 @@
                                         <exclude reference="jlA-Og-kdX"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                                     <mask key="subviews">
                                         <include reference="dnf-HA-EcF"/>
                                         <include reference="MhB-3I-rxO"/>
@@ -579,10 +582,10 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-1c-Elu" customClass="FancyView" customModule="sosocialapp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-1c-Elu" customClass="FancyView" customModule="So_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJj-uh-DZF" customClass="RoundBtnNoShadow" customModule="sosocialapp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJj-uh-DZF" customClass="RoundBtnNoShadow" customModule="So_Social" customModuleProvider="target">
                                         <rect key="frame" x="322" y="20" width="49" height="49"/>
                                         <color key="backgroundColor" red="0.96078431372549022" green="0.48627450980392156" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -601,7 +604,8 @@
                                                 <exclude reference="jWa-vI-cGQ"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="511" y="8" width="49" height="49"/>
                                             <mask key="constraints">
                                                 <include reference="IFH-KD-U8S"/>
                                                 <include reference="jWa-vI-cGQ"/>
@@ -611,7 +615,7 @@
                                             <action selector="postBtnTapped:" destination="MC9-GV-YtE" eventType="touchUpInside" id="bBr-Ml-KK7"/>
                                         </connections>
                                     </button>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="pEV-1N-ZXO" customClass="CircleView" customModule="sosocialapp" customModuleProvider="target">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="pEV-1N-ZXO" customClass="CircleView" customModule="So_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
@@ -635,7 +639,7 @@
                                             <outletCollection property="gestureRecognizers" destination="ZwJ-eO-42E" appends="YES" id="BHK-4D-Lph"/>
                                         </connections>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuD-Us-wBQ" customClass="FancyFieldTextBox" customModule="sosocialapp" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuD-Us-wBQ" customClass="FancyFieldTextBox" customModule="So_Social" customModuleProvider="target">
                                         <rect key="frame" x="79" y="20" width="233" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="131" id="RLU-Ql-TCB">
@@ -651,7 +655,8 @@
                                                 <exclude reference="sSQ-hR-DvG"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="65" y="9" width="438" height="49"/>
                                             <mask key="constraints">
                                                 <exclude reference="RLU-Ql-TCB"/>
                                                 <include reference="sSQ-hR-DvG"/>
@@ -687,7 +692,8 @@
                                         <exclude reference="lHD-lk-ExM"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="78" width="568" height="65"/>
                                     <mask key="subviews">
                                         <include reference="eJj-uh-DZF"/>
                                         <include reference="pEV-1N-ZXO"/>
@@ -752,7 +758,8 @@
                                         <exclude reference="pen-Sx-j1J"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                     <mask key="constraints">
                                         <include reference="pen-Sx-j1J"/>
                                     </mask>
@@ -763,14 +770,14 @@
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="507" id="tXB-IT-Gtn" customClass="PostCell" customModule="sosocialapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="507" id="tXB-IT-Gtn" customClass="PostCell" customModule="So_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tXB-IT-Gtn" id="HE9-nI-Sge">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="506"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSf-10-EyU" customClass="FancyView" customModule="sosocialapp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSf-10-EyU" customClass="FancyView" customModule="So_Social" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lg-profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="e1b-s5-Nud">
@@ -789,7 +796,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lg-profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-jZ-p2E" customClass="CircleView" customModule="sosocialapp" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lg-profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-jZ-p2E" customClass="CircleView" customModule="So_Social" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="60" id="7ok-Mu-Eji"/>
@@ -1098,6 +1105,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="156" width="600" height="379"/>
+                                </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
@@ -1203,7 +1213,7 @@
         <!--HelpVC-->
         <scene sceneID="fMV-Li-lNF">
             <objects>
-                <viewController id="gPR-kG-Tsm" customClass="HelpVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gPR-kG-Tsm" customClass="HelpVC" customModule="So_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <imageView key="view" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelpScreenSoSocial-1@1x" id="MPC-Q5-N6p">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1224,7 +1234,7 @@
         <!--PasswordVC-->
         <scene sceneID="ywW-h3-fsd">
             <objects>
-                <viewController id="hhI-Ex-MKb" customClass="PasswordVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hhI-Ex-MKb" customClass="PasswordVC" customModule="So_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cpN-Hd-5FR"/>
                         <viewControllerLayoutGuide type="bottom" id="oNI-kB-oin"/>
@@ -1509,7 +1519,7 @@
         <!--Search UserVC-->
         <scene sceneID="FB9-d0-Y9W">
             <objects>
-                <viewController id="Rf5-lR-KcI" customClass="SearchUserVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rf5-lR-KcI" customClass="SearchUserVC" customModule="So_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JeM-IW-bvh"/>
                         <viewControllerLayoutGuide type="bottom" id="HJH-sA-14j"/>
@@ -1521,6 +1531,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoSocialBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Jgk-6b-8Hi">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="sRA-Sc-lmJ" appends="YES" id="Le7-Xa-hYY"/>
                                 </connections>
@@ -1537,7 +1550,8 @@
                                         <exclude reference="VmM-Jg-fQU"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="28" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="Mu4-Xy-A57"/>
                                         <include reference="VmM-Jg-fQU"/>
@@ -1556,7 +1570,8 @@
                                         <exclude reference="re7-PU-5or"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="85" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="aBX-co-gJV"/>
                                         <include reference="re7-PU-5or"/>
@@ -1583,7 +1598,8 @@
                                         <exclude reference="gOw-i0-PgY"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="194" y="33" width="212" height="30"/>
                                     <mask key="constraints">
                                         <include reference="RRZ-gf-UfV"/>
                                         <include reference="gOw-i0-PgY"/>
@@ -1605,7 +1621,8 @@
                                         <exclude reference="P19-Wh-VXJ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="177" y="76" width="246" height="68"/>
                                     <mask key="constraints">
                                         <include reference="2VL-E4-IDR"/>
                                         <include reference="P19-Wh-VXJ"/>
@@ -1625,7 +1642,8 @@
                                         <exclude reference="w9j-RJ-Oc8"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="250" y="234" width="100" height="100"/>
                                     <mask key="constraints">
                                         <include reference="qQs-Cy-CH0"/>
                                         <include reference="w9j-RJ-Oc8"/>
@@ -1648,7 +1666,8 @@
                                         <exclude reference="iZL-7P-BAA"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="161" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="G4R-Rg-rFa"/>
                                         <include reference="iZL-7P-BAA"/>
@@ -1673,7 +1692,8 @@
                                         <exclude reference="qe1-HW-GZV"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="161" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="Fla-AE-yMV"/>
                                         <include reference="qe1-HW-GZV"/>
@@ -1794,7 +1814,7 @@
         <!--ProfileVC-->
         <scene sceneID="xgH-pT-zT4">
             <objects>
-                <viewController id="mse-pD-P2r" customClass="ProfileVC" customModule="sosocialapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mse-pD-P2r" customClass="ProfileVC" customModule="So_Social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jbt-tb-aRl"/>
                         <viewControllerLayoutGuide type="bottom" id="LHo-OA-mB5"/>
@@ -1806,6 +1826,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoSocialBackground" translatesAutoresizingMaskIntoConstraints="NO" id="T3X-7s-lh4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Lhm-wA-wkT" appends="YES" id="YYC-6C-K9v"/>
                                 </connections>
@@ -1822,7 +1845,8 @@
                                         <exclude reference="ufP-mF-3nl"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="28" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="3Q0-CC-0Nn"/>
                                         <include reference="ufP-mF-3nl"/>
@@ -1841,7 +1865,8 @@
                                         <exclude reference="cdh-Mq-Tf1"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="85" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="6ls-O9-pk0"/>
                                         <include reference="cdh-Mq-Tf1"/>
@@ -1868,7 +1893,8 @@
                                         <exclude reference="fPg-JM-w2y"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="194" y="33" width="212" height="30"/>
                                     <mask key="constraints">
                                         <include reference="0dj-hm-9wa"/>
                                         <include reference="fPg-JM-w2y"/>
@@ -1890,7 +1916,8 @@
                                         <exclude reference="gGG-Zf-v1C"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="177" y="76" width="246" height="68"/>
                                     <mask key="constraints">
                                         <include reference="TCd-NH-I5k"/>
                                         <include reference="gGG-Zf-v1C"/>
@@ -1910,7 +1937,8 @@
                                         <exclude reference="mtl-2i-MxH"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="160" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="ffr-F0-Iyh"/>
                                         <include reference="mtl-2i-MxH"/>
@@ -1935,7 +1963,8 @@
                                         <exclude reference="sEk-wB-iVP"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="160" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="TvK-zV-RVF"/>
                                         <include reference="sEk-wB-iVP"/>
@@ -1956,7 +1985,8 @@
                                         <exclude reference="UUc-kv-ZGO"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="208" width="560" height="30"/>
                                     <mask key="constraints">
                                         <include reference="UUc-kv-ZGO"/>
                                     </mask>
@@ -1965,7 +1995,7 @@
                                     <action selector="clkImgBtnTapped:" destination="mse-pD-P2r" eventType="touchUpInside" id="ft2-Rg-GEN"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lg-profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="HBs-SE-0WH" customClass="CircleViewWithBorder" customModule="sosocialapp" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lg-profileImg" translatesAutoresizingMaskIntoConstraints="NO" id="HBs-SE-0WH" customClass="CircleViewWithBorder" customModule="So_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="96w-Zs-nVW"/>
@@ -1977,7 +2007,8 @@
                                         <exclude reference="uLe-TV-c0e"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="200" y="246" width="200" height="200"/>
                                     <mask key="constraints">
                                         <include reference="96w-Zs-nVW"/>
                                         <include reference="uLe-TV-c0e"/>
@@ -1997,7 +2028,8 @@
                                         <exclude reference="wxd-IU-rfv"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="462" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="TD6-Rd-25X"/>
                                         <include reference="wxd-IU-rfv"/>
@@ -2020,7 +2052,8 @@
                                         <exclude reference="yNa-qh-wQM"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="518" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="hOb-rV-01E"/>
                                         <include reference="yNa-qh-wQM"/>
@@ -2045,7 +2078,8 @@
                                         <exclude reference="waC-CV-XBO"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="462" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="1fD-Vb-Vrj"/>
                                         <include reference="waC-CV-XBO"/>
@@ -2067,7 +2101,8 @@
                                         <exclude reference="v9k-TR-vae"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="181" y="518" width="238" height="40"/>
                                     <mask key="constraints">
                                         <include reference="i5I-xE-L5z"/>
                                         <include reference="v9k-TR-vae"/>
@@ -2233,6 +2268,7 @@
                         <outlet property="profileImg" destination="HBs-SE-0WH" id="m6v-jl-Dyb"/>
                         <outlet property="profileName" destination="2pD-gh-3fF" id="KqB-nD-yCr"/>
                         <segue destination="MC9-GV-YtE" kind="show" identifier="profileToFeed" id="tya-oK-Pzr"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="profileToSignIn" id="dV4-AM-8r5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZD-bK-pL3" sceneMemberID="firstResponder"/>
@@ -2260,8 +2296,8 @@
         <image name="your-posts1" width="43" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jKD-Ch-9om"/>
-        <segue reference="n44-cN-t7z"/>
+        <segue reference="tya-oK-Pzr"/>
         <segue reference="Ulx-nh-7bw"/>
+        <segue reference="dV4-AM-8r5"/>
     </inferredMetricsTieBreakers>
 </document>

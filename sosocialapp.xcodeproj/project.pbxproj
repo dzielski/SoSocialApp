@@ -54,7 +54,7 @@
 		165C69121D5C282B00D33266 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		165C69141D5C285200D33266 /* CircleViewWithBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleViewWithBorder.swift; sourceTree = "<group>"; };
 		16976C601D5DA4AB0019A3D0 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		16C2575D1D5BFC3C003EACF8 /* sosocialapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sosocialapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16C2575D1D5BFC3C003EACF8 /* So Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "So Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C257601D5BFC3C003EACF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16C257621D5BFC3C003EACF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16C257651D5BFC3C003EACF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		16C2575E1D5BFC3C003EACF8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16C2575D1D5BFC3C003EACF8 /* sosocialapp.app */,
+				16C2575D1D5BFC3C003EACF8 /* So Social.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			);
 			name = sosocialapp;
 			productName = sosocialapp;
-			productReference = 16C2575D1D5BFC3C003EACF8 /* sosocialapp.app */;
+			productReference = 16C2575D1D5BFC3C003EACF8 /* So Social.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -447,7 +447,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledez.sosocialapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "So Social";
 			};
 			name = Debug;
 		};
@@ -461,7 +461,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledez.sosocialapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "So Social";
 			};
 			name = Release;
 		};

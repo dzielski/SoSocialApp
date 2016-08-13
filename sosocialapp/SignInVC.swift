@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var pwdField: UITextField!
@@ -25,6 +25,9 @@ class SignInVC: UIViewController {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        emailField.delegate = self
+        pwdField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -152,5 +155,9 @@ class SignInVC: UIViewController {
         view.endEditing(true)
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
 }

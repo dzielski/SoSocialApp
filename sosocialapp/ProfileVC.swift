@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
@@ -176,7 +177,10 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
 
     @IBAction func logoutBtnTapped(sender: AnyObject) {
-// DZ - TODO - ADD LOGOUT CAPABILITY
+        let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
+        print("DZ: ID removed from keychain \(keychainResult)")
+        try! FIRAuth.auth()?.signOut()
+        self.performSegueWithIdentifier("profileToSignIn", sender: nil)
     }
     
     
