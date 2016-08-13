@@ -14,6 +14,7 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     @IBOutlet weak var profileImg: CircleViewWithBorder!
     @IBOutlet weak var profileName: UITextField!
+    @IBOutlet var cancelBtnView: UIButton!
     
     var profileImagePicker: UIImagePickerController!
 
@@ -28,6 +29,10 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // only show the button if either user sucessfully enters a profile pic and username or if
+        // they come here with a profile already set up
+        self.cancelBtnView.hidden = true
 
         profileImagePicker = UIImagePickerController()
         profileImagePicker.allowsEditing = true
@@ -80,6 +85,13 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
                         }
                     })
                 }
+            }
+            
+            // only if both conditions are true can we show the cancel button - force user to have these set
+            // before being able to cancel back to the feed screen and enter the system
+            if self.startingProfileName != "" && self.imageSelected == true
+            {
+                self.cancelBtnView.hidden = false
             }
             
         })
@@ -241,12 +253,7 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     // this function will just set the new username and profile image for the current user
     func postToFirebase (usrName: String, imgURL: String, imgID: String) {
-        
-//        let profile: Dictionary<String, AnyObject> = [
-//            "userName": profileName.text!,
-//            "imageURL": imgURL,
-//            ]
-//        
+                
         let firebasePost = DataService.ds.REF_USER_CURRENT
         firebasePost.child("userName").setValue(usrName)
         firebasePost.child("imageURL").setValue(imgURL)
@@ -254,12 +261,5 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         imageSelected = false
     }
-   
-    
-    
-    
-    
-    
-    
 
 }

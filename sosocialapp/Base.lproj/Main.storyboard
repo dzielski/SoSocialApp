@@ -1161,21 +1161,21 @@
                                 <exclude reference="KJf-0L-rUi"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="IU1-s8-X0b"/>
-                                <exclude reference="Kum-Dt-EzF"/>
-                                <exclude reference="mkL-kJ-ZFO"/>
+                                <exclude reference="Y5L-yg-Ebc"/>
+                                <exclude reference="0xb-l5-5fi"/>
+                                <exclude reference="2QH-jf-flg"/>
+                                <exclude reference="BxR-fk-105"/>
+                                <exclude reference="cKc-eM-dum"/>
+                                <exclude reference="tZ9-Ly-86e"/>
                                 <exclude reference="HNm-Hc-4hT"/>
                                 <exclude reference="hUV-K7-qbh"/>
                                 <exclude reference="yAu-Gx-XnJ"/>
                                 <exclude reference="HFM-sQ-pwP"/>
                                 <exclude reference="a35-Cr-s6h"/>
                                 <exclude reference="xqS-Zz-mtf"/>
-                                <exclude reference="tZ9-Ly-86e"/>
-                                <exclude reference="0xb-l5-5fi"/>
-                                <exclude reference="2QH-jf-flg"/>
-                                <exclude reference="BxR-fk-105"/>
-                                <exclude reference="cKc-eM-dum"/>
-                                <exclude reference="Y5L-yg-Ebc"/>
+                                <exclude reference="IU1-s8-X0b"/>
+                                <exclude reference="Kum-Dt-EzF"/>
+                                <exclude reference="mkL-kJ-ZFO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1187,21 +1187,21 @@
                                 <include reference="KJf-0L-rUi"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="IU1-s8-X0b"/>
-                                <include reference="Kum-Dt-EzF"/>
-                                <include reference="mkL-kJ-ZFO"/>
+                                <include reference="Y5L-yg-Ebc"/>
+                                <include reference="0xb-l5-5fi"/>
+                                <include reference="2QH-jf-flg"/>
+                                <include reference="BxR-fk-105"/>
+                                <include reference="cKc-eM-dum"/>
+                                <include reference="tZ9-Ly-86e"/>
                                 <include reference="HNm-Hc-4hT"/>
                                 <include reference="hUV-K7-qbh"/>
                                 <include reference="yAu-Gx-XnJ"/>
                                 <include reference="HFM-sQ-pwP"/>
                                 <include reference="a35-Cr-s6h"/>
                                 <include reference="xqS-Zz-mtf"/>
-                                <include reference="tZ9-Ly-86e"/>
-                                <include reference="0xb-l5-5fi"/>
-                                <include reference="2QH-jf-flg"/>
-                                <include reference="BxR-fk-105"/>
-                                <include reference="cKc-eM-dum"/>
-                                <include reference="Y5L-yg-Ebc"/>
+                                <include reference="IU1-s8-X0b"/>
+                                <include reference="Kum-Dt-EzF"/>
+                                <include reference="mkL-kJ-ZFO"/>
                             </mask>
                         </variation>
                         <connections>
@@ -2342,6 +2342,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cancelBtnView" destination="l19-jF-GCf" id="KS2-nu-1rg"/>
                         <outlet property="profileImg" destination="HBs-SE-0WH" id="m6v-jl-Dyb"/>
                         <outlet property="profileName" destination="2pD-gh-3fF" id="KqB-nD-yCr"/>
                         <segue destination="MC9-GV-YtE" kind="show" identifier="profileToFeed" id="tya-oK-Pzr"/>
